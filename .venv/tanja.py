@@ -1,9 +1,14 @@
 from flask import Flask
 from flask import render_template
+from flask import url_for
 
 app= Flask(__name__)
 
-menuUp = ["Головна", "Питання", "Регiстрацiя"]
+menuUp = [
+    {"name":"Головна", "url":"hauptseit"},
+    {"name":"Запитання", "url":"fragen"},
+    {"name":"Реeстрацiя", "url":"registrirung"}
+]
 
 @app.route("/")
 def index():
